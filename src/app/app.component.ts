@@ -33,31 +33,31 @@ export class AppComponent {
     if (this.newTask === undefined || this.newTask === "") {
       return;
     } else {
-      this.isLoading = true; // Yüklenme durumunu başlat
-      setTimeout(() => { // Simüle edilen bir asenkron işlem
+      this.isLoading = true;
+      setTimeout(() => {
         this.items.push(this.newTask);
         this.newTask = "";
         this.isInputEmpty = true;
         this.updateLocalStorage();
-        this.isLoading = false; // Yüklenme durumunu sonlandır
-      }, 350); // İsteğe bağlı olarak 1 saniye gecikme eklendi
+        this.isLoading = false;
+      }, 350);
     }
   }
 
   deleteTask(index: any) {
-    this.isLoading = true; // Yüklenme durumunu başlat
-    setTimeout(() => { // Simüle edilen bir asenkron işlem
+    this.isLoading = true;
+    setTimeout(() => {
       this.items.splice(index, 1);
       this.updateLocalStorage();
-      this.isLoading = false; // Yüklenme durumunu sonlandır
-    }, 350); // İsteğe bağlı olarak 1 saniye gecikme eklendi
+      this.isLoading = false;
+    }, 350);
   }
 
   editTask(index: number) {
     this.editingIndex = index;
   }
   saveTask() {
-    this.isLoading = true; // Yüklenme durumunu başlat
+    this.isLoading = true;
     this.editingIndex = -1;
     this.updateLocalStorage();
     this.isLoading= false;
