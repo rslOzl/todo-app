@@ -15,6 +15,7 @@ export class AppComponent {
   editingIndex: number = -1;
   isLoading: boolean = false;
 
+  isCheckboxChecked: boolean = false;
 
 
   constructor(){
@@ -66,4 +67,11 @@ export class AppComponent {
   updateLocalStorage() {
     localStorage.setItem('items', JSON.stringify(this.items));
   }
+
+  // onCheckboxChange(checked: boolean) {
+  //   if (checked) {
+  //    this.isCheckboxChecked= checked;
+  //   }
+  //   return;
+  // }
 }

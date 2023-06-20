@@ -53,7 +53,13 @@
         style="font-family: 'Montserrat', sans-serif; font-weight: bold"
       >
         <ng-container *ngIf="editingIndex !== index; else editTaskField">
-          {{ x }}
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            class="checkbox-button"
+          />
+          <span [class.stroked-text]="isCheckboxChecked">{{ x }}</span>
         </ng-container>
         <ng-template #editTaskField>
           <input
