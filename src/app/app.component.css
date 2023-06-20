@@ -5,3 +5,8 @@
 .stroked-text {
   text-decoration: line-through;
 }
+
+.hover-effect:hover {
+  transition: 0.3s;
+  background-color: aquamarine;
+}
